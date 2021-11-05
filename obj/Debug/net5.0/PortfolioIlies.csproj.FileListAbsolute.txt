@@ -358,3 +358,4 @@ C:\Users\ilies\source\repos\PortfolioIlies\bin\Debug\net5.0\tr\Microsoft.CodeAna
 C:\Users\ilies\source\repos\PortfolioIlies\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\ilies\source\repos\PortfolioIlies\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\ilies\source\repos\PortfolioIlies\obj\Debug\net5.0\PortfolioIlies.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ilies\source\repos\PortfolioIlies\obj\Debug\net5.0\Razor\Views\Home\TestVue.cshtml.g.cs
