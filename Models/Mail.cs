@@ -9,12 +9,12 @@
 //{
 //    public static class Mail
 //    {
-//        private static readonly string fromAddress = "webmaster@openspot.fr";
-//        private static readonly string fromAddressTitle = "HUBOS";
+//        private static readonly string fromAddress = "";
+//        private static readonly string fromAddressTitle = "PORTFOLIO";
 //        private static readonly string smtpServer = "ssl0.ovh.net";
 //        private static readonly int smtpPortNumber = 587;
-//        private static readonly string credentialLogin = "webmaster@openspot.fr";
-//        private static readonly string credentialPassword = "rdelpech_2020";
+//        private static readonly string credentialLogin = "";
+//        private static readonly string credentialPassword = "";
 
 //        /// <summary>
 //        /// 
