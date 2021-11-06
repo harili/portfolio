@@ -49,12 +49,12 @@
             </div>
         </div>
         <div class="col-md-6" style="height:100vh;">
-            <main id="js-page-content" role="main">
-                <div id="page-container"></div>
-            </main>
+            <div id="page-container">
+                @RenderBody()
+            </div>
         </div>
     </div>
-    @RenderBody()
+
     <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

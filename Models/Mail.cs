@@ -11,7 +11,7 @@
 //    {
 //        private static readonly string fromAddress = "";
 //        private static readonly string fromAddressTitle = "PORTFOLIO";
-//        private static readonly string smtpServer = "ssl0.ovh.net";
+//        private static readonly string smtpServer = "";
 //        private static readonly int smtpPortNumber = 587;
 //        private static readonly string credentialLogin = "";
 //        private static readonly string credentialPassword = "";
