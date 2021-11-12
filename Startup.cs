@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,8 +25,37 @@ namespace PortfolioIlies
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews()
-         .AddRazorRuntimeCompilation();
+            services.AddOptions();
+
+            services.AddLogging(loggingBuilder =>
+            {
+                loggingBuilder.AddConsole();
+                loggingBuilder.AddDebug();
+            });
+
+            // Add framework services
+            //services.AddDbContext<HubosContext>(
+            //   options => options.UseSqlServer(
+            //       Configuration.GetConnectionString("DefaultConnection")
+            //   )
+            //);
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+#if DEBUG
+            IMvcBuilder builder = services.AddRazorPages();
+
+
+            builder.AddRazorRuntimeCompilation();
+
+#endif
+
+            services.AddMvc(options =>
+            {
+                options.EnableEndpointRouting = false;
+            });
+            services.AddDistributedMemoryCache();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,18 +71,18 @@ namespace PortfolioIlies
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseHsts();
             app.UseHttpsRedirection();
+            app.UseCookiePolicy();
             app.UseStaticFiles();
+            app.UseAuthentication();
+            app.UseSession();
 
-            app.UseRouting();
-
-            app.UseAuthorization();
-
-            app.UseEndpoints(endpoints =>
+            app.UseMvc(routes =>
             {
-                endpoints.MapControllerRoute(
+                routes.MapRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

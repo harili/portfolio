@@ -1,7 +1,8 @@
 ﻿$(document).ready(function () {
-    ui.controller.pageLoad();
-    $(window).on('hashchange', function (e) {
-        ui.controller.pageLoad(window.location.hash);
+
+    var elem = $("ul.nav-pills li a.nav-link");
+    elem.on("click", function () {
+        ui.controller.pageLoad($(this).attr("href"));
     });
 });
 
@@ -12,21 +13,15 @@ var ui = {
 };
 
 ui.controller.pageLoad = function (hash = null) {
-    if (hash === null) {
-        console.log("y'a r", hash);
-        hash = window.location.hash;
-        if (hash.length < 2 || hash[0] !== "#") {
-            hash = $("ul.nav-pills li a").first().attr("href");
-        }
-    }
+
     if (hash.length > 2 && hash[0] === "#") {
         console.log("ici", hash);
         $("ul.nav-pills li a").removeClass("active");
         $.get(hash.substring(1), function (data) {
-
+            console.log(data);
             ui.controller.page = null;
             $("#page-container").html(data);
-
+            ui.controller.pageInit();
             var linkItem = $("ul.nav-pills li a[href='" + hash + "']");
             linkItem.addClass("active");
         });
@@ -49,3 +44,4 @@ ui.controller.isValidHash = function (hash) {
 ui.controller.urlRewrite = function (url) {
     return url.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/ /g, '-').replace(/'/g, '').replace(/&/g, 'et');
 };
+

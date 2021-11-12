@@ -1,0 +1,6 @@
+﻿@using Microsoft.AspNetCore.Http
+@{
+
+    bool isAjaxCall = Context.Request.Headers["x-requested-with"] == "XMLHttpRequest";
+    Layout = isAjaxCall ? null : "_Layout";
+}

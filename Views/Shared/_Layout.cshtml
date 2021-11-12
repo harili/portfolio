@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - PortfolioIlies</title>
+    <title>@ViewData["Title"] - Portfolio Ilies</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
@@ -11,14 +11,9 @@
 </head>
 <body>
     <div class="row">
-        <div class="col-md-3">
-            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="height:100vh;">
+        <div class="col-md-3 bg-dark" style="height:100vh;">
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-white">
                 <ul class="nav nav-pills flex-column mb-auto">
-                    <li class="nav-item">
-                        <a href="#/Home/Index" class="nav-link">
-                            <i class="fi fi-br-home"></i>Accueil
-                        </a>
-                    </li>
                     <li class="nav-item">
                         <a href="#/Home/AboutMe" class="nav-link">
                             <i class="fi fi-br-user"></i> Moi
@@ -43,21 +38,36 @@
                 <hr>
             </div>
         </div>
-        <div class="col-md-3 header-profile" style="height:100vh;">
+        <div class="col-md-3 header-profile bg-danger" style="height:100vh;">
             <div class="header-picture">
                 <h3>test</h3>
             </div>
         </div>
-        <div class="col-md-6" style="height:100vh;">
+        <div class="col-md-6 bg-info" style="height:100vh;">
             <div id="page-container">
-                @RenderBody()
+                @{ RenderBody(); }
             </div>
         </div>
     </div>
+    @switch (ViewData["Title"])
+    {
+        case "AboutMe":
+            <script src="~/js/aboutme-handler.js"></script>
+            break;
+        case "Contact":
+            <script src="~/js/contact-handler.js"></script>
+            break;
+        case "Portfolio":
+            <script src="~/js/portfolio-handler.js"></script>
+            break;
+        case "Resume":
+            <script src="~/js/resume-handler.js"></script>
+            break;
+    }
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="~/js/site.js" asp-append-version="true"></script>
 
-    <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
     @RenderSection("Scripts", required: false)
 </body>

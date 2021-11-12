@@ -25,12 +25,9 @@ C:\Users\ilies\source\repos\PortfolioIlies\obj\Debug\net5.0\PortfolioIlies.TagHe
 C:\Users\ilies\source\repos\PortfolioIlies\obj\Debug\net5.0\PortfolioIlies.RazorCoreGenerate.cache
 C:\Users\ilies\source\repos\PortfolioIlies\obj\Debug\net5.0\Razor\Views\Home\AboutMe.cshtml.g.cs
 C:\Users\ilies\source\repos\PortfolioIlies\obj\Debug\net5.0\Razor\Views\Home\Contact.cshtml.g.cs
-C:\Users\ilies\source\repos\PortfolioIlies\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\ilies\source\repos\PortfolioIlies\obj\Debug\net5.0\Razor\Views\Home\Portfolio.cshtml.g.cs
 C:\Users\ilies\source\repos\PortfolioIlies\obj\Debug\net5.0\Razor\Views\Home\Resume.cshtml.g.cs
-C:\Users\ilies\source\repos\PortfolioIlies\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\ilies\source\repos\PortfolioIlies\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\Users\ilies\source\repos\PortfolioIlies\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\ilies\source\repos\PortfolioIlies\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\ilies\source\repos\PortfolioIlies\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\ilies\source\repos\PortfolioIlies\obj\Debug\net5.0\PortfolioIlies.RazorTargetAssemblyInfo.cache
@@ -358,4 +355,5 @@ C:\Users\ilies\source\repos\PortfolioIlies\bin\Debug\net5.0\tr\Microsoft.CodeAna
 C:\Users\ilies\source\repos\PortfolioIlies\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\ilies\source\repos\PortfolioIlies\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\ilies\source\repos\PortfolioIlies\obj\Debug\net5.0\PortfolioIlies.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\ilies\source\repos\PortfolioIlies\obj\Debug\net5.0\Razor\Views\Home\TestVue.cshtml.g.cs
+C:\Users\ilies\source\repos\PortfolioIlies\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\ilies\source\repos\PortfolioIlies\obj\Debug\net5.0\Razor\Views\Home\_ViewStart.cshtml.g.cs
